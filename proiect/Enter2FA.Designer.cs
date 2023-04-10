@@ -59,7 +59,7 @@
             this.btSend2FA.UseVisualStyleBackColor = true;
             this.btSend2FA.Click += new System.EventHandler(this.btSend2FA_Click);
             // 
-            // Enter2FA
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -67,8 +67,8 @@
             this.Controls.Add(this.btSend2FA);
             this.Controls.Add(this.tb2FA);
             this.Controls.Add(this.label1);
-            this.Name = "Enter2FA";
-            this.Text = "Introduceti Codul";
+            this.Name = "Form1";
+            this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
 

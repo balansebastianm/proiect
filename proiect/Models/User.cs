@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace proiect.Models
 {
@@ -14,6 +18,5 @@ namespace proiect.Models
         public string TwoFactorKey { get; set; }
         [Required]
         public string Salt { get; set; }
-        public DateTime? TwoFactorCreatedOn { get; set; }
     }
 }

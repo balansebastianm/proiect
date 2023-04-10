@@ -95,6 +95,17 @@
       <DependentUpon>LogIn.cs</DependentUpon>
     </Compile>
     <Compile Include="MailManager.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Migrations\202304100936327_InitialCreate.cs" />
+    <Compile Include="Migrations\202304100936327_InitialCreate.designer.cs">
+      <DependentUpon>202304100936327_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304100937580_a.cs" />
+    <Compile Include="Migrations\202304100937580_a.designer.cs">
+      <DependentUpon>202304100937580_a.cs</DependentUpon>
+    </Compile>
+>>>>>>> parent of e46cfae (Add expiration time to token)
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\User.cs" />
@@ -112,6 +123,15 @@
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+=======
+    <EmbeddedResource Include="Migrations\202304100936327_InitialCreate.resx">
+      <DependentUpon>202304100936327_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304100937580_a.resx">
+      <DependentUpon>202304100937580_a.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> parent of e46cfae (Add expiration time to token)
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
