@@ -33,6 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbParola = new System.Windows.Forms.TextBox();
             this.btLogIn = new System.Windows.Forms.Button();
+            this.btRegister = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -66,10 +67,11 @@
             this.tbParola.Name = "tbParola";
             this.tbParola.Size = new System.Drawing.Size(100, 20);
             this.tbParola.TabIndex = 3;
+            this.tbParola.UseSystemPasswordChar = true;
             // 
             // btLogIn
             // 
-            this.btLogIn.Location = new System.Drawing.Point(75, 94);
+            this.btLogIn.Location = new System.Drawing.Point(80, 92);
             this.btLogIn.Name = "btLogIn";
             this.btLogIn.Size = new System.Drawing.Size(75, 23);
             this.btLogIn.TabIndex = 4;
@@ -77,11 +79,22 @@
             this.btLogIn.UseVisualStyleBackColor = true;
             this.btLogIn.Click += new System.EventHandler(this.btLogIn_Click);
             // 
+            // btRegister
+            // 
+            this.btRegister.Location = new System.Drawing.Point(80, 121);
+            this.btRegister.Name = "btRegister";
+            this.btRegister.Size = new System.Drawing.Size(75, 23);
+            this.btRegister.TabIndex = 5;
+            this.btRegister.Text = "Register";
+            this.btRegister.UseVisualStyleBackColor = true;
+            this.btRegister.Click += new System.EventHandler(this.btRegister_Click);
+            // 
             // LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(251, 149);
+            this.Controls.Add(this.btRegister);
             this.Controls.Add(this.btLogIn);
             this.Controls.Add(this.tbParola);
             this.Controls.Add(this.label2);
@@ -101,5 +114,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbParola;
         private System.Windows.Forms.Button btLogIn;
+        private System.Windows.Forms.Button btRegister;
     }
 }

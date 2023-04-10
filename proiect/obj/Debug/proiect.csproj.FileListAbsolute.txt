@@ -1,6 +1,5 @@
 C:\Users\Sebi\source\repos\proiect\proiect\obj\Debug\proiect.csproj.AssemblyReference.cache
 C:\Users\Sebi\source\repos\proiect\proiect\obj\Debug\proiect.csproj.SuggestedBindingRedirects.cache
-C:\Users\Sebi\source\repos\proiect\proiect\obj\Debug\proiect.Form1.resources
 C:\Users\Sebi\source\repos\proiect\proiect\obj\Debug\proiect.LogIn.resources
 C:\Users\Sebi\source\repos\proiect\proiect\obj\Debug\proiect.Properties.Resources.resources
 C:\Users\Sebi\source\repos\proiect\proiect\obj\Debug\proiect.csproj.GenerateResource.cache
@@ -29,3 +28,11 @@ C:\Users\Sebi\source\repos\proiect\proiect\bin\Debug\System.Threading.Tasks.Exte
 C:\Users\Sebi\source\repos\proiect\proiect\obj\Debug\proiect.csproj.CopyComplete
 C:\Users\Sebi\source\repos\proiect\proiect\obj\Debug\proiect.exe
 C:\Users\Sebi\source\repos\proiect\proiect\obj\Debug\proiect.pdb
+C:\Users\Sebi\source\repos\proiect\proiect\bin\Debug\EntityFramework.dll
+C:\Users\Sebi\source\repos\proiect\proiect\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Sebi\source\repos\proiect\proiect\bin\Debug\EntityFramework.xml
+C:\Users\Sebi\source\repos\proiect\proiect\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Sebi\source\repos\proiect\proiect\obj\Debug\proiect.Register.resources
+C:\Users\Sebi\source\repos\proiect\proiect\obj\Debug\proiect.Migrations.InitialCreate.resources
+C:\Users\Sebi\source\repos\proiect\proiect\obj\Debug\proiect.Migrations.a.resources
+C:\Users\Sebi\source\repos\proiect\proiect\obj\Debug\proiect.Enter2FA.resources
