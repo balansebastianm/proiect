@@ -95,7 +95,7 @@ namespace proiect
                 var thirtyMinutesAgo = currentTime.AddMinutes(-30);
 
                 var recordsToDelete = dbContexts.Users.Where(x => x.TwoFactorCreatedOn < thirtyMinutesAgo).ToList();
-                foreach(var record in recordsToDelete)
+                foreach (var record in recordsToDelete)
                 {
                     record.TwoFactorKey = null;
                     record.TwoFactorCreatedOn = null;
