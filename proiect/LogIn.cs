@@ -1,18 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.Entity;
-using System.Drawing;
+﻿using proiect.Models;
+using System;
 using System.Linq;
-using System.Runtime.Remoting.Contexts;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MailKit;
-using MimeKit;
-using proiect.Models;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace proiect
 {
@@ -26,14 +15,15 @@ namespace proiect
 
         private bool CheckData()
         {
-            using (ApplicationDbContext dbContexts = new ApplicationDbContext()) {
+            using (ApplicationDbContext dbContexts = new ApplicationDbContext())
+            {
                 var user = dbContexts.Users.FirstOrDefault(i => i.Email == tbEmail.Text);
                 if (user != null)
                 {
                     //email bun, verificam parola
                     Register r = new Register();
 
-                    if(r.CheckPassword(tbParola.Text, user.Salt, user.Password))
+                    if (r.CheckPassword(tbParola.Text, user.Salt, user.Password))
                     {
                         dbContexts.SaveChanges();
                         MessageBox.Show("Autentificarea a avut loc cu succes. Verifica emailul.");
@@ -85,12 +75,33 @@ namespace proiect
                 {
                     var user = dbContexts.Users.FirstOrDefault(i => i.Email == tbEmail.Text);
                     user.TwoFactorKey = MFCode;
+                    user.TwoFactorCreatedOn = DateTime.UtcNow;
+                    var timer = new System.Timers.Timer(1 * 60 * 1000); // 30 minutes
+                    timer.Elapsed += Timer_Elapsed;
+                    timer.Start();
                     dbContexts.SaveChanges();
                 }
                 this.Hide();
                 Enter2FA fa = new Enter2FA(tbEmail.Text);
                 fa.Closed += (s, args) => this.Close();
                 fa.Show();
+            }
+        }
+        private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            using (ApplicationDbContext dbContexts = new ApplicationDbContext())
+            {
+                var currentTime = DateTime.Now;
+                var thirtyMinutesAgo = currentTime.AddMinutes(-30);
+
+                var recordsToDelete = dbContexts.Users.Where(x => x.TwoFactorCreatedOn < thirtyMinutesAgo).ToList();
+                foreach(var record in recordsToDelete)
+                {
+                    record.TwoFactorKey = null;
+                    record.TwoFactorCreatedOn = null;
+                }
+                MessageBox.Show("Deleted");
+                dbContexts.SaveChanges();
             }
         }
     }

@@ -36,3 +36,5 @@ C:\Users\Sebi\source\repos\proiect\proiect\obj\Debug\proiect.Register.resources
 C:\Users\Sebi\source\repos\proiect\proiect\obj\Debug\proiect.Migrations.InitialCreate.resources
 C:\Users\Sebi\source\repos\proiect\proiect\obj\Debug\proiect.Migrations.a.resources
 C:\Users\Sebi\source\repos\proiect\proiect\obj\Debug\proiect.Enter2FA.resources
+C:\Users\Sebi\source\repos\proiect\proiect\obj\Debug\proiect.Migrations.Addcreationdate.resources
+C:\Users\Sebi\source\repos\proiect\proiect\obj\Debug\proiect.Migrations.nullable.resources

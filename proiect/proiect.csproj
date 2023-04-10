@@ -103,6 +103,14 @@
     <Compile Include="Migrations\202304100937580_a.designer.cs">
       <DependentUpon>202304100937580_a.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202304101749365_Add-creation-date.cs" />
+    <Compile Include="Migrations\202304101749365_Add-creation-date.designer.cs">
+      <DependentUpon>202304101749365_Add-creation-date.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304101758476_nullable.cs" />
+    <Compile Include="Migrations\202304101758476_nullable.designer.cs">
+      <DependentUpon>202304101758476_nullable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\User.cs" />
@@ -125,6 +133,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202304100937580_a.resx">
       <DependentUpon>202304100937580_a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304101749365_Add-creation-date.resx">
+      <DependentUpon>202304101749365_Add-creation-date.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304101758476_nullable.resx">
+      <DependentUpon>202304101758476_nullable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
