@@ -93,25 +93,5 @@ namespace proiect
                 fa.Show();
             }
         }
-<<<<<<< HEAD
-        private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
-        {
-            using (ApplicationDbContext dbContexts = new ApplicationDbContext())
-            {
-                var currentTime = DateTime.Now;
-                var thirtyMinutesAgo = currentTime.AddMinutes(-30);
-
-                var recordsToDelete = dbContexts.Users.Where(x => x.TwoFactorCreatedOn < thirtyMinutesAgo).ToList();
-                foreach (var record in recordsToDelete)
-                {
-                    record.TwoFactorKey = null;
-                    record.TwoFactorCreatedOn = null;
-                }
-                MessageBox.Show("Deleted");
-                dbContexts.SaveChanges();
-            }
-        }
-=======
->>>>>>> parent of e46cfae (Add expiration time to token)
     }
 }
