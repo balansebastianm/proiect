@@ -34,6 +34,8 @@ namespace proiect
                 if (tb2FA.Text.ToString() == TwoFactorCode)
                 {
                     MessageBox.Show("Autentificarea a avut loc cu succes!");
+                    FormPrincipal formPrincipal = new FormPrincipal();
+                    formPrincipal.Show();
                 }
                 else
                 {

@@ -111,3 +111,4 @@ C:\Users\ccjok\Desktop\securitate\proiectssi\proiect\obj\Debug\proiect.csproj.Co
 C:\Users\ccjok\Desktop\securitate\proiectssi\proiect\obj\Debug\proiect.csproj.CopyComplete
 C:\Users\ccjok\Desktop\securitate\proiectssi\proiect\obj\Debug\proiect.exe
 C:\Users\ccjok\Desktop\securitate\proiectssi\proiect\obj\Debug\proiect.pdb
+C:\Users\ccjok\Desktop\securitate\proiectssi\proiect\obj\Debug\proiect.FormPrincipal.resources

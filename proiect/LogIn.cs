@@ -25,7 +25,8 @@ namespace proiect
         }
 
         private bool CheckData()
-        {
+        {            
+                      
             using (ApplicationDbContext dbContexts = new ApplicationDbContext()) {
                 var user = dbContexts.Users.FirstOrDefault(i => i.Email == tbEmail.Text);
                 if (user != null)
