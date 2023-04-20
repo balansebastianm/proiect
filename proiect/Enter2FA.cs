@@ -33,7 +33,7 @@ namespace proiect
                 Debug.WriteLine(TwoFactorCode);
                 if (tb2FA.Text.ToString() == TwoFactorCode)
                 {
-                    MessageBox.Show("Autentificarea a avut loc cu succes");
+                    MessageBox.Show("Autentificarea a avut loc cu succes!");
                 }
                 else
                 {
