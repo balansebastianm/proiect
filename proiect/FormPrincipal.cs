@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SharpPcap;
 
 namespace proiect
 {
@@ -16,7 +17,50 @@ namespace proiect
         public FormPrincipal()
         {
             InitializeComponent();
+
+            var devices = CaptureDeviceList.Instance;
+
+
+            var device = devices[0];
+
+
+            device.Open(DeviceMode.Promiscuous);
+
+
+            device.Filter = "tcp port 80";
+
+
+            device.OnPacketArrival += OnPacketArrival;
+
+            device.StartCapture();
+
+            listBox1.DisplayMember = "Description";
+
+            MessageBox.Show("Click OK to stop capturing...");
+
+            device.StopCapture();
+
+            device.Close();
+
         }
+
+        private void OnPacketArrival(object sender, CaptureEventArgs e)
+        {
+            if (listBox1.InvokeRequired)
+            {
+                listBox1.Invoke(new Action(() =>
+                {
+                    listBox1.Items.Add($"[{e.Packet.Timeval.Date}] {e.Packet.ToString()}");
+                }));
+            }
+            else
+            {
+                listBox1.Items.Add($"[{e.Packet.Timeval.Date}] {e.Packet.ToString()}");
+            }
+
+            Console.WriteLine($"[{e.Packet.Timeval.Date}] {e.Packet.ToString()}");
+        }
+
 
         private void blocksite_btn_Click(object sender, EventArgs e)
         {
@@ -58,5 +102,7 @@ namespace proiect
                 MessageBox.Show($"Site-ul {siteToUnblock} nu este blocat");
             }
         }
+
+        
     }
 }
