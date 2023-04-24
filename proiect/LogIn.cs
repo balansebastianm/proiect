@@ -22,10 +22,16 @@ namespace proiect
         public LogIn()
         {
             InitializeComponent();
+            this.FormClosed += new FormClosedEventHandler(ParentClosed);
+        }
+        void ParentClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
         }
 
         private bool CheckData()
-        {
+        {            
+                      
             using (ApplicationDbContext dbContexts = new ApplicationDbContext()) {
                 var user = dbContexts.Users.FirstOrDefault(i => i.Email == tbEmail.Text);
                 if (user != null)
@@ -58,8 +64,6 @@ namespace proiect
 
         private void btLogIn_Click(object sender, EventArgs e)
         {
-
-            //verificare date de conectare
             if (CheckData())
             {
 

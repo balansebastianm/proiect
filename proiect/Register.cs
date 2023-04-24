@@ -21,6 +21,11 @@ namespace proiect
         public Register()
         {
             InitializeComponent();
+            this.FormClosed += new FormClosedEventHandler(ParentClosed);
+        }
+        void ParentClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
         }
         private bool CheckEmail(string Email)
         {

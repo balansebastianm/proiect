@@ -22,6 +22,11 @@ namespace proiect
         {
             this.Email = Email;
             InitializeComponent();
+            this.FormClosed += new FormClosedEventHandler(ParentClosed);
+        }
+        void ParentClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
         }
 
         private void btSend2FA_Click(object sender, EventArgs e)
@@ -33,7 +38,10 @@ namespace proiect
                 Debug.WriteLine(TwoFactorCode);
                 if (tb2FA.Text.ToString() == TwoFactorCode)
                 {
-                    MessageBox.Show("Autentificarea a avut loc cu succes");
+                    MessageBox.Show("Autentificarea a avut loc cu succes!");
+                    FormPrincipal formPrincipal = new FormPrincipal();
+                    formPrincipal.Show();
+                    this.Dispose();
                 }
                 else
                 {
